@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/edNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="Nome:"
+         />
+
+    <EditText
+        android:id="@+id/edMana"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="Mana:"
+         />
+
+    <EditText
+        android:id="@+id/edCusto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="Custo total de mana:"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/edTipo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="Tipo da carta:"
+        />
+
+    <EditText
+        android:id="@+id/edText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="Texto da carta:"
+        />
+
+    <EditText
+        android:id="@+id/edFlavor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="Flavortext:"
+        />
+
+    <EditText
+        android:id="@+id/edAtaque"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="Ataque da carta, deixe em branco se não se aplicar a mesma:"
+        android:inputType="number"
+        />
+
+    <EditText
+        android:id="@+id/edDefesa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="Defesa da carta, deixe em branco se não se aplicar a mesma:"
+        android:inputType="number"
+        />
+
+    <EditText
+        android:id="@+id/edRegras"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="Regras:"
+        />
+
+</LinearLayout>
+
+</ScrollView>

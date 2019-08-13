@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MQRCode</string>
+    <string name="ir_para_o_leitor">Ir para o leitor</string>
+    <string name="ir_para_o_menu_cadastrar">Ir para o menu cadastrar</string>
+    <string name="decks">Decks</string>
+    <string name="remover" />
+    <string name="salvar_carta">Salvar carta</string>
+</resources>
