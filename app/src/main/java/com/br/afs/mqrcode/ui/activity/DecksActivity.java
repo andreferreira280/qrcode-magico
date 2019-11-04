@@ -67,9 +67,8 @@ private ListaCartasView lcv;
         Intent iniciaFormulario = new Intent(DecksActivity.this, FormCartasActivity.class);
         iniciaFormulario.putExtra("carta", cartaSelecionada);
         startActivity(iniciaFormulario);
-        finish();
+                finish();
 //        Log.i("idAluno", String.valueOf(alunoSelecionado.getId()));
     }
 
-}
-
+                    }

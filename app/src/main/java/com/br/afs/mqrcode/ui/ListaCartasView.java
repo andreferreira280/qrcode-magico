@@ -17,6 +17,7 @@ public class ListaCartasView {
     private final ListaCartasAdapter adapter;
     private final CartaDao cd;
     private final Context context;
+private Carta carta;
 
     public ListaCartasView(Context context) {
         this.context = context;
@@ -36,7 +37,7 @@ public class ListaCartasView {
             public void onClick(DialogInterface dialog, int which) {
                 AdapterView.AdapterContextMenuInfo menuInfo = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
                 Carta cartaEscolhida = adapter.getItem(menuInfo.position);
-                remove(cartaEscolhida);
+                remove(cartaEscolhida, 1);
             }
         })
                 .setNegativeButton("Cancelar", null)
@@ -51,18 +52,43 @@ public class ListaCartasView {
         adapter.atualiza(mao);
     }
 
+    public void  confirmaRemocaoMao(final MenuItem item) {
+        new AlertDialog
+                .Builder(context)
+                .setTitle("Remover carta?")
+                .setMessage("Deseja realmente remover a carta?")
+                .setPositiveButton("Confirmar", new DialogInterface
+                        .OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        AdapterView.AdapterContextMenuInfo menuInfo = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+                        Carta cartaEscolhida = adapter.getItem(menuInfo.position);
+                        remove(cartaEscolhida, 0);
+                    }
+                })
+                .setNegativeButton("Cancelar", null)
+                .show();
+    }
+
 
     public Carta consultarNome(String nome) {
         return cd.porNome(nome);
     }
 
-    private void remove(Carta carta) {
-        cd.remove(carta);
+    private void remove(Carta carta, int i) {
+        if(i!=0) {
+            cd.remove(carta);
+        }
         adapter.remove(carta);
+        this.carta = carta;
     }
+
 
     public void configuraAdapter(ListView lv) {
         lv.setAdapter(adapter);
     }
 
+public Carta getCarta() {
+        return carta;
+}
 }

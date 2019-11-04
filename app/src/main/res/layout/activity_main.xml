@@ -5,20 +5,20 @@
 
     <Button
         android:id="@+id/btLeitor"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/ir_para_o_leitor" />
 
     <Button
         android:id="@+id/btCadastrar"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/ir_para_o_menu_cadastrar"
             />
 
     <Button
         android:id="@+id/btDecks"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/decks"
         />
