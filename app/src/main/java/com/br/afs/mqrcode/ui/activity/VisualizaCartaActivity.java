@@ -15,10 +15,10 @@ public class VisualizaCartaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_visualiza_carta);
+    setContentView(R.layout.activity_visualiza_carta);
         iniciaComponentes();
         carrega();
-    }
+        }
 
     private void iniciaComponentes() {
         tvNome = findViewById(R.id.tvNome);

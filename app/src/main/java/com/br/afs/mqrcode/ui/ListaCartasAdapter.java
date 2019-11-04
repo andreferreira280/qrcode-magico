@@ -75,4 +75,5 @@ import java.util.List;
          this.cartas.addAll(cartas);
          notifyDataSetChanged();
      }
+
  }

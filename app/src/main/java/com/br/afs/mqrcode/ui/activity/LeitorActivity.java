@@ -56,6 +56,8 @@ private List<Carta> mao = new ArrayList<Carta>();
     protected void onResume() {
         super.onResume();
         lcv.atualizaMao(this.mao);
+//alert("atualizando! ");
+            alert(String.format("o tamanho da mão agora é: %s", mao.size()));
     }
 
     @Override
@@ -67,8 +69,10 @@ private List<Carta> mao = new ArrayList<Carta>();
 
     public boolean onContextItemSelected(MenuItem item) {
         int itemId = item.getItemId();
-        if (itemId == R.id.mnRemover) {
-            lcv.confirmaRemocao(item);
+        if (itemId == R .id.mnRemover) {
+            lcv.confirmaRemocaoMao(item);
+            mao.remove(lcv.getCarta());
+
         }
         return super.onContextItemSelected(item);
     }
@@ -117,7 +121,7 @@ private List<Carta> mao = new ArrayList<Carta>();
         {
             if (ir.getContents() != null)
             {
-                alert(ir.getContents().toString());
+//                alert(ir.getContents().toString());
                 carta = lcv.consultarNome(ir.getContents().toString());
                 confereSeResultadoEncontradoCorrespondeAUmaCarta(carta);
             }
@@ -146,9 +150,8 @@ private List<Carta> mao = new ArrayList<Carta>();
 
     private void adicionaCartaAMao(Carta c) {
         alert("O tamanho da mão agora é: " + mao.size() + " e a carta a ser adicionada é: " + c.getNome());
-        this.mao.add(c);
+        mao.add(c);
         alert("O tamanho da mão agora é: " + mao.size() + " e a carta adicionada foi: " + mao.get(0).getNome());
-        lcv.atualizaMao(this.mao);
     }
 
     private void alert(String msg) {
